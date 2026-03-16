@@ -71,14 +71,14 @@ class Graph:
                 self._dfs_component(neighbor, visited, comp)
 
 
-# Example usage
+
 g = Graph()
 g.add_edge('A', 'B')
 g.add_edge('A', 'C')
 g.add_edge('B', 'D')
 g.add_edge('C', 'E')
 g.add_edge('E', 'F')
-g.add_edge('F', 'C')  # creates a cycle
+g.add_edge('F', 'C') 
 
 print("Recursive DFS starting from A:")
 g.dfs_recursive('A')
