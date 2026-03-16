@@ -15,7 +15,6 @@ def bfs(graph, start):
                 visited.add(neighbor)
                 queue.append(neighbor)
 
-# Example graph (adjacency list)
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
