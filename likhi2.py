@@ -3,7 +3,6 @@ class Graph:
         self.graph = {}
 
     def add_edge(self, u, v):
-        # Add edge u -> v
         if u not in self.graph:
             self.graph[u] = []
         if v not in self.graph:
@@ -28,7 +27,6 @@ class Graph:
             if vertex not in visited:
                 print(f"Visited (iterative): {vertex}")
                 visited.add(vertex)
-                # Add neighbors to stack
                 stack.extend(reversed(self.graph[vertex]))
         return visited
 
