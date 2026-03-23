@@ -14,7 +14,6 @@ def iddfs(graph, start, target, max_depth):
             return True
     return False
 
-# Example usage
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
@@ -24,4 +23,4 @@ graph = {
     'F': []
 }
 
-print(iddfs(graph, 'A', 'F', 3))  # Output: True
+print(iddfs(graph, 'A', 'F', 3)) 
