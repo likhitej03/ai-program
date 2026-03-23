@@ -1,11 +1,10 @@
-# Function to display the room
 import random
 
 
 def display(room):
     print(room)
 
-# Initialize the room as a 4x4 grid, all elements set to 1 (dirty)
+
 room = [
     [1, 1, 1, 1],
     [1, 1, 1, 1],
@@ -15,39 +14,38 @@ room = [
 print("All the rooms are dirty")
 display(room)
 
-# Randomly dirty some rooms
-x = 0  # Initialize the row index
-y = 0  # Initialize the column index
 
-while x < 4:  # Loop over each row
-    while y < 4:  # Loop over each column in the current row
-        # Randomly choose 0 (clean) or 1 (dirty) for the current cell
+x = 0  
+y = 0 
+
+while x < 4: 
+    while y < 4: 
+       
         room[x][y] = random.choice([0, 1])
-        y += 1  # Move to the next column
-    x += 1  # Move to the next row
-    y = 0  # Reset the column index to start from 0 for the next row
+        y += 1 
+    x += 1 
+    y = 0  
 
 print("Before cleaning the room, I detect all of these random dirts")
 display(room)
 
-# Initialize counters for the cleaning process
-x = 0  # Initialize the row index
-y = 0  # Initialize the column index
-z = 0  # Counter for the number of dirty cells cleaned
+
+x = 0  
+y = 0 
+z = 0  
 
 # Clean the room
-while x < 4:  # Loop over each row
-    while y < 4:  # Loop over each column in the current row
-        if room[x][y] == 1:  # If the current cell is dirty
+while x < 4: 
+    while y < 4: 
+        if room[x][y] == 1: 
             print("Vacuum in this location now:", x, y)
-            room[x][y] = 0  # Clean the current cell
+            room[x][y] = 0 
             print("Cleaned:", x, y)
-            z += 1  # Increment the counter for cleaned cells
-        y += 1  # Move to the next column
-    x += 1  # Move to the next row
-    y = 0  # Reset the column index to start from 0 for the next row
+            z += 1  
+        y += 1  
+    x += 1  
+    y = 0  
 
-# Calculate the performance percentage
 performance = (100 - ((z / 16) * 100))
 print("Room is clean now. Thanks for using the Robot Vacuum Cleaner!")
 display(room)
